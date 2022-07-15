@@ -24,15 +24,59 @@
     &__item {
         padding: 30px 30px 25px 30px;
         border: 1px solid #5F5F5F;
-        &-name {
-            margin-top: 20px;
-            font-weight: 700;
-            font-size: 14px;
+        &-img {
+            display: flex;
+            align-items: center;
+            min-height: 65px;
         }
-        &-descr {
-            margin-top: 13px;
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 15px;
+            margin-bottom: 0;
             font-size: 12px;
             line-height: 18px;
+        }
+    }
+    &__ratings {
+        margin-top: calc(90px + 8px);
+        display: grid;
+        grid-template: repeat(2, minmax(60px, auto)) / repeat(3, 350px);
+        gap: calc(30px + 8px) 45px;
+        &-item {
+            display: grid;
+            grid-template: minmax(21px, auto) 14px / 230px 35px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        &-title {
+            position: relative;
+            padding: 1px 0 0 12px;
+            @include before_circle;
+            &::before {
+                top: -8px;
+            }
+        }
+        &-counter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-line {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            background-color: #E8E4DE;
+            border-radius: 4px;
+            span {
+                display: block;
+                height: 100%;
+                // background-color: $main-color;
+                border-radius: 4px;
+            }
         }
     }
 }

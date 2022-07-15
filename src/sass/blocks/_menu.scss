@@ -66,9 +66,9 @@
             top: 10px;
             width: 15px;
             height: 15px;
-            border: 1px solid #000000;
+            border: 2px solid #fff;
             border-radius: 100%;
-            transition: all .3s;
+            transition: all .5s;
         }
         &:hover {
             &::before {
