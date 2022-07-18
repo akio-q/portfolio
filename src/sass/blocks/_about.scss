@@ -33,7 +33,7 @@
     }
     &__skills {
         display: grid;
-        grid-template: repeat(2, minmax(115px, auto)) / repeat(2, 260px);
+        grid-template: repeat(1, minmax(115px, auto)) / repeat(2, 260px);
         grid-auto-rows: minmax(115px, auto);
         gap: 20px 50px;
         &-item {

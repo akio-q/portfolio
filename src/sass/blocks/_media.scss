@@ -1,15 +1,60 @@
+@media (max-width: 1350px) {
+    .sidepanel {
+        display: none;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
     }
-    .sidepanel {
-        display: none;
+    .about {
+        &__wrapper {
+            grid-template-columns: 400px 510px;
+            column-gap: 40px;
+        }
+        &__descr {
+            padding-right: 40px;
+        }
+        &__skills {
+            grid-template-columns: repeat(2,250px);;
+            column-gap: 20px;
+            &-item {
+                grid-template-columns: 40px 195px;
+                column-gap: 15px;
+            }
+        }
     }
 }
 
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
+    }
+    .title {
+        &_fz36 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template-columns: 300px 380px;
+        }
+        &__descr {
+            padding-right: 0;
+        }
+        &__skills {
+            grid-template-columns: 380px;
+            grid-auto-rows: minmax(115px, auto);
+            &-item {
+                grid-template-columns: 40px 320px;
+                column-gap: 20px;
+            }
+        }
+    }
+    .pageup {
+        bottom: 10px;
+        right: 10px;
     }
 }
 
@@ -34,6 +79,23 @@
     .hamburger {
         right: 20px;
     }
+    .about {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template: 400px auto auto/ 1fr;
+        }
+        &__photo {
+            grid-row: unset
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 240px);
+            column-gap: 30px;
+            &-item {
+                grid-template-columns: 40px 200px;
+                column-gap: 20px;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -46,6 +108,9 @@
             font-size: 22px;
             width: 300px;
         }
+        &_fz36 {
+            font-size: 24px;
+        }
     }
     .promo {
         background: url('../img/main_background.jpg') no-repeat 30% / cover;
@@ -57,6 +122,14 @@
         &__block {
             padding-left: 20px;
             width: 250px;
+        }
+    }
+    .about {
+        &__wrapper {
+            grid-template: 340px auto auto/ 1fr;
+        }
+        &__skills {
+            grid-template-columns: 1fr;
         }
     }
 }

@@ -32,7 +32,7 @@ $(document).ready(function(){
 }); 
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 700) {
+    if ($(this).scrollTop() > 800) {
         $('.pageup').fadeIn();
     } else {
         $('.pageup').fadeOut();
