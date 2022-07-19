@@ -44,3 +44,12 @@ $("a[href=#up]").click(function(){
     $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
     return false;
 });
+
+const sendBtn = document.querySelector('.contacts__btn');
+
+sendBtn.addEventListener('click', () => {
+    alert(`
+    Sorry, I'm not yet eighteen and I can't be responsible for your details. 
+    Please write to me on one of the above social networks. 
+    Thanks for understanding!`);
+});
