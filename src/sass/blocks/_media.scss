@@ -103,6 +103,12 @@
             gap: 10px;
         }
     }
+    .price {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, 335px);
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -162,6 +168,14 @@
     .portfolio {
         padding-top: 80px;
     }
+    .price {
+        padding-top: 60px;
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 420px);
+            justify-content: center;
+            row-gap: 30px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -210,6 +224,13 @@
         }
         &__ratings {
             grid-template-columns: 300px;
+        }
+    }
+    .price {
+        &__wrapper {
+            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, 300px);
+            row-gap: 20px;
         }
     }
 }
