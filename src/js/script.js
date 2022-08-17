@@ -1,16 +1,22 @@
-const hamburger = document.querySelector('.hamburger');
-      menu = document.querySelector('.menu')
-      close = document.querySelector('.menu__close');
+const hamburger = document.querySelector('.hamburger'),
+      menu = document.querySelector('.menu'),
+      closeBtn = document.querySelector('.menu__close');
 
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
 });
 
-close.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-const counters = document.querySelectorAll('.skills__ratings-counter');
+document.addEventListener('keydown', e => {
+    if (menu.classList.contains('active') && e.key === 'Escape') {
+        menu.classList.remove('active');
+    }
+});
+
+const counters = document.querySelectorAll('.skills__ratings-counter'),
       lines = document.querySelectorAll('.skills__ratings-line span');
 
 counters.forEach((item, i) => {
