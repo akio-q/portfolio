@@ -23,7 +23,6 @@ menuOverlay.addEventListener('click', () => {
     }
 });
 
-
 const counters = document.querySelectorAll('.skills__ratings-counter'),
       lines = document.querySelectorAll('.skills__ratings-line span');
 
@@ -55,7 +54,19 @@ $(window).scroll(function() {
 
 $("a[href=#up]").click(function(){
     const _href = $(this).attr("href");
-    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
+    return false;
+});
+
+$(".promo__link").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
+    return false;
+});
+
+$(".menu__link a").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 800);
     return false;
 });
 
