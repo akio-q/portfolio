@@ -1,5 +1,6 @@
 const hamburger = document.querySelector('.hamburger'),
       menu = document.querySelector('.menu'),
+      menuOverlay = menu.querySelector('.menu__overlay'),
       closeBtn = document.querySelector('.menu__close');
 
 hamburger.addEventListener('click', () => {
@@ -15,6 +16,13 @@ document.addEventListener('keydown', e => {
         menu.classList.remove('active');
     }
 });
+
+menuOverlay.addEventListener('click', () => {
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+    }
+});
+
 
 const counters = document.querySelectorAll('.skills__ratings-counter'),
       lines = document.querySelectorAll('.skills__ratings-line span');
